@@ -1,0 +1,23 @@
+<!-- Collect tags from all posts -->
+{%- assign tags = blank -%}
+{%- for icon in site.icons -%}
+  {%- assign icon_tags = icon.tags | join:'|' | append:'|' -%}
+  {%- if icon_tags != '|' -%}
+    {%- assign tags = tags | append:icon_tags -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign tags = tags | split:'|' | uniq | sort -%}
+
+<!-- List tags & related posts -->
+<div class="p-3 button-group filter-button-group" style="display: flex; flex-wrap: wrap;">
+  <a class="button text-decoration-none no-underline tag-item" style="cursor: pointer;" data-filter="*">
+    <span class="tag badge badge-pill">All</span>
+  </a>
+  {% for tag in tags %}
+  <a class="button text-decoration-none no-underline tag-item" style="cursor: pointer;" data-filter=".{{ tag }}">
+    <span class="tag badge badge-pill">
+      <span class="circle-color"></span>
+      {{ tag }}</span>
+  </a>
+  {% endfor %}
+</div>

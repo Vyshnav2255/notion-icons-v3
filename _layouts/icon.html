@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="px-3 py-5">
+<h2>{{ page.title }}</h2>
+<p class="text-muted metadata">
+Tag: 
+{% for tag in page.tags %}
+    <a class="text-decoration-none no-underline" href="{{ tag | slugify | prepend:'/tags#' | relative_url }}">
+      <span class="tag badge badge-pill">{{ tag }}</span>
+    </a>
+{% endfor %}
+</p>
+<hr>
+<div class="p-1">
+    <img style="height: 20em; width: 20em; display: block; margin: 0 auto;" src="{{ page.image }}" alt="{{ page.title }}">
+</div>
+<p class="text-center pt-3">
+    {% include elements/download-btn.html %}
+    {% include elements/copy-btn.html %}
+</p>
+</div>
