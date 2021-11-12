@@ -68,13 +68,16 @@ $dark-900: #121212;
   border: 1px solid #c7caced2 !important;
 }
 .btn{
-  background-color: #000000 !important;
-  border-color: #d4d4d4 !important;
-  color: #d4d4d4 !important;
+  background-color: #000000;
+  border-color: #d4d4d4;
+  color: #d4d4d4;
 
   svg{
     fill: #d4d4d4 !important;
   }
+  &:hover{
+    background-color: #333333 !important;
+    }
 }
 
 .badge {
@@ -82,7 +85,7 @@ $dark-900: #121212;
   color: #d4d4d4;
 
   &:hover{
-    background-color: #a56de2;
+    background-color: #333333;
     }
   }
 

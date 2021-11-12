@@ -39,7 +39,7 @@ body {
 
     }
     :hover.btn{
-        background-color: #cd9ef7 !important;
+        background-color: #abacae !important;
         }
 
 .navbar-light .navbar-nav .nav-link{
@@ -63,7 +63,7 @@ body {
     fill: #575858;
 
     &:hover{
-        fill: #a56de2;
+        fill: #000000;
     }
 }
 
@@ -87,7 +87,7 @@ small{
     font-size: 85%;
 
     &:hover{
-        background-color: #a56de2;
+        background-color: #333333;
         }
 }
 
@@ -122,4 +122,16 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
+}
+
+.circle-color{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    margin: 0 4px 0 4px;
+    display: inline-block;
+}
+
+span.circle-color.active {
+    border: 4px solid #666666;
 }
