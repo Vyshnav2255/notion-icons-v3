@@ -1,5 +1,5 @@
 ---
 title: Pin
 image: /svg/Pin - Banana.svg
-tag: Pin
+tag: Banana
 ---
